@@ -1,0 +1,115 @@
+.topBar{
+  height:50px;
+  width: 100%;
+  position: absolute;
+  left: 300px;
+  color: #ffffff;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.canvas{
+    border:4px black solid;
+    background-color: white;
+    position:absolute;
+    top:50px;
+    bottom:0px;
+    left:300px;
+    right:0px
+}
+
+.toolBar {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 25px;
+}
+
+.rightBar {
+    height: 100%;
+    width: 3500px;
+    position: fixed;
+    top: 50px;
+    left: 1580px;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 25px;
+}
+
+.bottomBar {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 770px;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 25px;
+}
+
+.btn {
+    font-size: 20px;
+    width: 199px;
+    transition: all ease-in-out 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover{
+  color: black;
+  border: 1px solid #888;
+  background-color: #ddd;
+}
+
+#canvas-draft{
+    background-color: transparent;
+}
+
+body{
+    overflow:hidden;
+}
+.canvas-container{
+    height:720px;
+}  
+
+input {
+  font: 15px Arial;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e6e6e6;
+}
+h2 {
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-family: 'Open Sans';
+}
+#color-input {
+  display: none;
+}
+#color-label {
+  margin-left: 15px;
+  position: absolute;
+  height: 30px;
+  width: 50px;
+} 
+#color-input:checked ~ #color-picker {
+  opacity: 1;
+}
+#color-picker {
+  position: absolute;
+  left: 70px; 
+  background-color: white;
+  height: 150px;
+  width: 183px;
+  border: solid 1px #ccc;
+  opacity: 0;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas app group 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div class="topBar"> 
+        <h2>Please draw on me</h2>
+    </div>
+    <div class="toolBar">
+        <div class="buttons">
+            <span class="btn btn-primary fa fa-chalkboard-teacher" id="clear-button" title="Clears Canvas">Clear All</span> 
+            <span class="btn btn-primary fa fa-square" id="drawing-rectangle" title="Draw the Rectangle">Drawing Rectangle</span>
+            <span class="btn btn-primary fa fa-paint-brush" id="drawing-line" title="Free Line drawing">Free Drawing</span>
+            <span class="btn btn-primary fa fa-circle" id="drawing-ellipse" title="Draw the Circle">Drawing Ellipse </span>
+            <span class="btn btn-primary fa fa-minus" id="straight-line" title="Draw a Straight Line">Straight Line</span>
+            <span class="btn btn-primary fa fa-moon" id="curved-line" title="Draw a Curved Line">Curved Line 88</span>
+            <span class="btn btn-primary fa fa-font" id="text" title="Type me Harder">Type me 88</span>
+            <span class="btn btn-primary fa fa-eraser" id="rubber" title="I rub out">Rubber</span>  
+        </div>
+        <div class="color-pallette">
+                <h2>Canvas Color Picker</h2>
+
+                <label for="color-input" id="color-label" style="background-color: red"></label>
+                <input type="checkbox" id="color-input" checked></input>
+                
+                <div id="color-picker">
+                  <canvas id="color-block" height="150" width="150"></canvas><!--
+                  --><canvas id="color-strip" height="150" width="30"></canvas>
+                </div>
+        </div>
+    </div>
+    <div class="main">
+        <section class="canvas-container">
+            <canvas id="canvas-real" class="canvas" width='1280px' height='720px'></canvas>
+            <canvas id="canvas-draft" class="canvas" width='1280px' height='720px'></canvas>
+        </section>
+    </div>
+    <div class="rightBar">
+    </div>
+    <div class="bottomBar">
+    </div>
+
+    <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type='text/javascript' src="canvas-common.js"></script>
+    <script type='text/javascript' src="clear.js"></script>
+    <script type='text/javascript' src="drawing-line.js"></script>
+    <script type='text/javascript' src="drawing-rectangle.js"></script>
+    <script type='text/javascript' src="color-pallette.js"></script>
+    <script type='text/javascript' src="drawing-ellipse.js"></script>
+    <script type='text/javascript' src="drawing-straight.js"></script>
+    <script type='text/javascript' src="text.js"></script>
+    <script type='text/javascript' src="rubber.js"></script>  
+    <script type='text/javascript'>   
+        currentFunction = new DrawingRectangle(contextReal, contextDraft);
+
+        $('#clear-button').click(() => {
+            currentFunction = new ClearButton(contextReal, contextDraft);
+            console.log('function clear active');
+        });
+        $('#drawing-rectangle').click(() => {
+            currentFunction = new DrawingRectangle(contextReal, contextDraft);
+            console.log('function Rectangle  active');
+
+        });
+        $('#drawing-line').click(() => {
+            currentFunction = new DrawingLine(contextReal);
+            console.log('function line active');
+
+        });
+        $('#drawing-ellipse').click(() => {
+            currentFunction = new DrawingEllipse(contextReal, contextDraft);
+            console.log('function ellipse active');
+        });
+        $('#straight-line').click(() => {
+            currentFunction = new DrawingStraight(contextReal, contextDraft);
+            console.log('function straight active');
+        });
+        $('#curved-line').click(() => {
+            currentFunction = new DrawingCurved(contextReal, contextDraft);
+            console.log('function Curved active');
+        });
+        $('#text').click(() => {
+            currentFunction = new Text(contextReal);
+            console.log('function text active');
+        });
+        $('#rubber').click(() => {
+            currentFunction = new Rubber(contextReal, contextDraft);
+            console.log('function rubbing active');
+        });
+        
+    </script>
+</body>
+
+</html>
