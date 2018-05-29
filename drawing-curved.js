@@ -6,6 +6,7 @@ class DrawingCurved extends PaintFunction{
         this.actionCounter = 0;           
     }
 
+
     onMouseDown(coord, event){
         if (this.actionCounter === 0){
         this.contextReal.lineCap = 'round';
