@@ -81,7 +81,7 @@ body{
 }  
 
 input {
-  font: 15px Arial;
+  font: 20px Arial;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -117,4 +117,75 @@ h2 {
   width: 183px;
   border: solid 1px #ccc;
   opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .topBar{
+    height:25px;
+    width: 100%;
+    position: absolute;
+    left: 150px;
+    color: #ffffff;
+    background-color: #D18F37;
+    overflow-x: hidden;
+  }
+  .topBar h2{
+    font-size: 10px;
+  }
+  
+  .canvas{
+      border:4px #D18F37 solid;
+      background-color: white;
+      position:absolute;
+      top:25px;
+      bottom:0px;
+      left:150px;
+      right:0px
+  }
+  
+  .colorText{
+    color:#FFF;
+    font-size: 10px;
+    text-align: center;
+  }
+  .toolBar {
+      height: 100%;
+      width: 150px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #D18F37;
+      overflow-x: hidden;
+      padding-top: 27px;
+  }
+  
+  .rightBar {
+      height: 100%;
+      width: 1750px;
+      position: fixed;
+      top: 25px;
+      left: 550px;
+      background-color: #D18F37;
+      overflow-x: hidden;
+      padding-top: 13px;
+  }
+  
+  .bottomBar {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 325px;
+      background-color: #D18F37;
+      overflow-x: hidden;
+      padding-top: 13px;
+  }
+  
+  .btn {
+      font-size: 10px;
+      width: 100px;
+      transition: all ease-in-out 0.4s;
+      cursor: pointer;
+  }
 }

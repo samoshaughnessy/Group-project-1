@@ -76,7 +76,7 @@ function changeColor(e) {
   var imageData = ctx1.getImageData(x, y, 1, 1).data;
   rgbaColor = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
   colorLabel.style.backgroundColor = rgbaColor;
-  let color = colorLabel.style.backgroundColor;
+  let color = rgbaColor;
 
   function updateColor(target,color){
     switch(target) {
