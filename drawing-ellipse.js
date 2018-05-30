@@ -6,12 +6,12 @@ class DrawingEllipse extends PaintFunction{
     }
 
     onMouseDown(coord, event){
-        this.contextReal.fillStyle = "#ffff00";
-        this.contextReal.strokeStyle = "red"; 
-        this.contextDraft.fillStyle = "#ffff00";
-        this.contextDraft.strokeStyle = "black";  
-        this.contextReal.lineWidth = 1;
-        this.contextDraft.lineWidth = 1;
+        this.contextReal.fillStyle = document.getElementById('colorpickerfill').value; 
+        this.contextReal.strokeStyle = document.getElementById('colorpickerstroke').value; 
+        this.contextDraft.fillStyle = document.getElementById('colorpickerfill').value; 
+        this.contextDraft.strokeStyle = document.getElementById('colorpickerstroke').value;  
+        this.contextReal.lineWidth = 5;
+        this.contextDraft.lineWidth = 5;
         this.contextReal.beginPath(); 
         this.origX = coord[0];
         this.origY = coord[1];
