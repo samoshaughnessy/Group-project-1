@@ -19,17 +19,18 @@
         <h2>Please draw on me</h2>
     </div>
     <div class="toolBar">
-        <div class="buttons">
-            <a class="btn btn-primary fa fa-download" id="download" download="my-file-name.png" href="#" title="I save">Save me!</a>  
-            <span class="btn btn-primary fa fa-chalkboard-teacher" id="clear-button" title="Clears Canvas">Clear All</span> 
-            <span class="btn btn-primary fa fa-square" id="drawing-rectangle" title="Draw the Rectangle">Drawing Rectangle</span>
-            <span class="btn btn-primary fa fa-paint-brush" id="drawing-line" title="Free Line drawing">Free Drawing</span>
-            <span class="btn btn-primary fa fa-circle" id="drawing-ellipse" title="Draw the Circle">Drawing Ellipse </span>
-            <span class="btn btn-primary fa fa-minus" id="straight-line" title="Draw a Straight Line">Straight Line</span>
-            <span class="btn btn-primary fa fa-moon" id="curved-line" title="Draw a Curved Line">Curved Line</span>
+        <div class="buttons text-center">
+            <a class="btn btn-success fa fa-download" id="download" download="my-file-name.png" href="#" title="I save">Save me!</a>  
+            <span class="btn btn-danger fa fa-chalkboard-teacher" id="clear-button" title="Clears Canvas">Clear All</span> 
+            <span class="btn btn-danger fa fa-eraser" id="rubber" title="I rub out">Rubber</span>  
+            <span class="btn btn-info fa fa-paint-brush" id="drawing-line" title="Free Line drawing">Free Drawing</span>
+            <span class="btn btn-info fa fa-minus" id="straight-line" title="Draw a Straight Line">Straight Line</span>
+            <span class="btn btn-info fa fa-moon" id="curved-line" title="Draw a Curved Line">Curved Line</span>
             <span class="btn btn-primary fa fa-exclamation-triangle" id="triangle" title="Draw a triangle">Triangle</span>
+            <span class="btn btn-primary fa fa-square" id="drawing-rectangle" title="Draw the Rectangle">Drawing Rectangle</span>
+            <span class="btn btn-primary fa fa-circle" id="drawing-ellipse" title="Draw the Circle">Drawing Ellipse </span>
             <span class="btn btn-primary fa fa-font" id="text" title="Type me Harder">Type me</span>
-            <span class="btn btn-primary fa fa-eraser" id="rubber" title="I rub out">Rubber</span>  
+
         </div>
         <!--old version
         <div class="color-pallette">
@@ -43,8 +44,8 @@
                   <canvas id="color-strip" height="150" width="30"></canvas>
                 </div>
         </div> -->
-        <div>fill<input type="color" id="colorpickerfill"></div>
-        <div>stroke<input type="color" id="colorpickerstroke"></div>
+        <div class="colorText"><h3>fill</h3><input type="color" id="colorpickerfill"></div>
+        <div class="colorText"><h3>stroke</h3><input type="color" id="colorpickerstroke"></div>
     </div>
     <div class="main">
         <section class="canvas-container">

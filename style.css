@@ -4,12 +4,12 @@
   position: absolute;
   left: 300px;
   color: #ffffff;
-  background-color: black;
+  background-color: #D18F37;
   overflow-x: hidden;
 }
 
 .canvas{
-    border:4px black solid;
+    border:4px #D18F37 solid;
     background-color: white;
     position:absolute;
     top:50px;
@@ -18,6 +18,11 @@
     right:0px
 }
 
+.colorText{
+  color:#FFF;
+  font-size: 20px;
+  text-align: center;
+}
 .toolBar {
     height: 100%;
     width: 300px;
@@ -25,7 +30,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #D18F37;
     overflow-x: hidden;
     padding-top: 25px;
 }
@@ -36,7 +41,7 @@
     position: fixed;
     top: 50px;
     left: 1100px;
-    background-color: black;
+    background-color: #D18F37;
     overflow-x: hidden;
     padding-top: 25px;
 }
@@ -46,7 +51,7 @@
     width: 100%;
     position: fixed;
     top: 650px;
-    background-color: black;
+    background-color: #D18F37;
     overflow-x: hidden;
     padding-top: 25px;
 }
