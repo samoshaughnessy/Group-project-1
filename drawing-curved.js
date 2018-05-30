@@ -29,7 +29,6 @@ class DrawingCurved extends PaintFunction{
         if (this.actionCounter === 0){
         this.endX = coord[0];
         this.endY = coord[1];
-        this.contextDraft.closePath();
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX, this.origY);

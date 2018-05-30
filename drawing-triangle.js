@@ -14,16 +14,20 @@ class DrawingTriangle extends PaintFunction {
             this.contextReal.beginPath();
             this.origX = coord[0];
             this.origY = coord[1];
-            this.contextReal.moveTo(this.origX, this.origY)
             console.log('you want something?');
             this.actionCounter = 1;
-            // above starts the triangle, you starting coord
+            // above starts the triangle, your starting coord
         }
         else if (this.actionCounter === 1) {
+            this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
             this.contextDraft.beginPath();
             this.endX = coord[0];
             this.endY = coord[1];            
+            this.contextDraft.moveTo(this.origX, this.origY);
             this.contextDraft.lineTo(this.endX, this.endY);
+            this.contextDraft.fill();
+            this.contextDraft.stroke();
+            console.log('im a meseek look at me');
             this.actionCounter = 2;
         }
     }
@@ -31,19 +35,29 @@ class DrawingTriangle extends PaintFunction {
 
     onDragging(coord, event) {
         if (this.actionCounter === 2) {
-            this.contextDraft.moveTo(this.origX, this.origY);
-            this.contextDraft.lineTo(coord[0], coord[1]);
-            this.contextDraft.closePath();
+            this.posX = coord[0];
+            this.posY = coord[1];
+            this.contextDraft.lineTo(this.posX, this.posY);
+            this.contextDraft.fill();
             this.contextDraft.stroke();
-            this.actionCounter = 0;
+            this.contextDraft.closePath();
+            console.log('hello general kenobi')
+            this.actionCounter = 3;
         }
     }
 
-    onMouseUp(coord, event) {
+    onMouseMove(){}
+    onMouseUp(coord) {
+        if (this.actionCounter === 3){
         this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
+        this.contextReal.moveTo(this.origX, this.origY)
         this.contextReal.lineTo(this.endX, this.endY);
         this.contextReal.lineTo(coord[0], coord[1]);
         this.contextReal.closePath();
+        this.contextReal.fill();
         this.contextReal.stroke();
+        console.log('should I be here?')  
+        this.actionCounter = 0;  
+        } 
     }
 }
