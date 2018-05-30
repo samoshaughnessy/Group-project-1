@@ -8,7 +8,7 @@ class DrawingTriangle extends PaintFunction {
 
     onMouseDown(coord, event) {
         if (this.actionCounter === 0) {
-            this.contextReal.fillStyle = "#f44";
+            this.contextReal.fillStyle = rgbaColor;
             this.contextReal.strokeStyle = "black";
             this.contextReal.lineWidth = 5;
             this.contextReal.beginPath();

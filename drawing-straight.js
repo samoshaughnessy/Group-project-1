@@ -6,8 +6,8 @@ class DrawingStraight extends PaintFunction{
     }
     
     onMouseDown(coord,event){
-        this.contextReal.strokeStyle = "black";
-        this.contextDraft.strokeStyle = "black";
+        this.contextReal.strokeStyle = rgbaColor;
+        this.contextDraft.strokeStyle = rgbaColor;
         this.contextReal.lineCap = "round";
         this.contextDraft.lineCap = "round";
         this.contextReal.lineWidth = 5;

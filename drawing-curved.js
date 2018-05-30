@@ -11,8 +11,8 @@ class DrawingCurved extends PaintFunction{
         if (this.actionCounter === 0){
         this.contextReal.lineCap = 'round';
         this.contextDraft.lineCap = 'round';
-        this.contextReal.strokeStyle = "black"; 
-        this.contextDraft.strokeStyle = "black";  
+        this.contextReal.strokeStyle = rgbaColor; 
+        this.contextDraft.strokeStyle = rgbaColor;  
         this.contextReal.lineWidth = 5;
         this.contextDraft.lineWidth = 5;
         this.origX = coord[0];
