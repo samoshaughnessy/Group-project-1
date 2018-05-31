@@ -25,7 +25,9 @@ class DrawingTriangle extends PaintFunction {
             this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
             this.contextDraft.beginPath();
             this.endX = coord[0];
-            this.endY = coord[1];            
+            this.endY = coord[1];        
+            this.contextReal.setLineDash([]);
+            this.contextDraft.setLineDash([]);    
             this.contextDraft.moveTo(this.origX, this.origY);
             this.contextDraft.lineTo(this.endX, this.endY);
             this.contextDraft.fill();

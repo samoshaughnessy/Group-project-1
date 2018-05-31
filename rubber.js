@@ -9,6 +9,8 @@ class Rubber extends PaintFunction{
         this.context.lineJoin = "round";
         this.context.lineWidth = document.getElementById('brushSize').value;
         this.context.beginPath();
+        this.contextReal.setLineDash([]);
+        this.contextDraft.setLineDash([]);
         this.context.moveTo(coord[0],coord[1]);
         this.draw(coord[0],coord[1]);
         console.log('rubbing??')

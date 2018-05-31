@@ -21,6 +21,7 @@
             <span class="btn btn-danger fa fa-chalkboard-teacher" id="clear-button" title="Clears Canvas">Clear All</span> 
             <span class="btn btn-danger fa fa-eraser" id="rubber" title="I rub out">Rubber</span>  
             <span class="btn btn-info fa fa-paint-brush" id="drawing-line" title="Free Line drawing">Free Drawing</span>
+            <span class="btn btn-info fa fa-ellipsis-h" id="dotted-line" title="Dashed Line drawing">Dashed Line</span>
             <span class="btn btn-info fa fa-minus" id="straight-line" title="Draw a Straight Line">Straight Line</span>
             <span class="btn btn-info fa fa-moon" id="curved-line" title="Draw a Curved Line">Curved Line</span>
             <span class="btn btn-primary fa fa-exclamation-triangle" id="triangle" title="Draw a triangle">Triangle</span>
@@ -74,6 +75,7 @@
     <script type='text/javascript' src="drawing-rectangle.js"></script>
     <script type='text/javascript' src="drawing-curved.js"></script>
     <script type='text/javascript' src="drawing-ellipse.js"></script>
+    <script type='text/javascript' src="drawing-dotted.js"></script>
     <script type='text/javascript' src="drawing-triangle.js"></script>
     <script type='text/javascript' src="drawing-straight.js"></script>
     <script type='text/javascript' src="text.js"></script>
@@ -102,6 +104,11 @@
         $('#straight-line').click(() => {
             currentFunction = new DrawingStraight(contextReal, contextDraft);
             console.log('function straight active');
+        });
+        $('#dotted-line').click(() => {
+            currentFunction = new DrawingDotted(contextReal, contextDraft);
+            console.log('function Dotted  active');
+
         });
         $('#curved-line').click(() => {
             currentFunction = new DrawingCurved(contextReal, contextDraft);

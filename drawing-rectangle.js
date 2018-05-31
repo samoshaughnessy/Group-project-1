@@ -10,6 +10,8 @@ class DrawingRectangle extends PaintFunction{
         this.contextReal.strokeStyle = document.getElementById('colorpickerstroke').value; 
         this.contextReal.lineWidth = document.getElementById('brushSize').value;
         this.contextReal.beginPath();
+        this.contextReal.setLineDash([]);
+        this.contextDraft.setLineDash([]);
         this.origX = coord[0];
         this.origY = coord[1];
         console.log('you clicked?');

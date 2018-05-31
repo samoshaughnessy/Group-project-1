@@ -18,6 +18,8 @@ class DrawingCurved extends PaintFunction{
         this.origX = coord[0];
         this.origY = coord[1];
         this.contextReal.beginPath(); 
+        this.contextReal.setLineDash([]);
+        this.contextDraft.setLineDash([]);
         this.contextReal.moveTo(this.origX, this.origY);
         console.log('yummy');
     }

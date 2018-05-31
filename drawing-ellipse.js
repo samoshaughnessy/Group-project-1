@@ -13,6 +13,8 @@ class DrawingEllipse extends PaintFunction{
         this.contextReal.lineWidth = document.getElementById('brushSize').value;
         this.contextDraft.lineWidth = document.getElementById('brushSize').value;
         this.contextReal.beginPath(); 
+        this.contextReal.setLineDash([]);
+        this.contextDraft.setLineDash([]);        
         this.origX = coord[0];
         this.origY = coord[1];
         console.log('fuck');
