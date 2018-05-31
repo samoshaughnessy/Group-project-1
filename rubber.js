@@ -7,7 +7,7 @@ class Rubber extends PaintFunction{
     onMouseDown(coord,event){
         this.context.strokeStyle = "white";
         this.context.lineJoin = "round";
-        this.context.lineWidth = 10;
+        this.context.lineWidth = document.getElementById('brushSize').value;
         this.context.beginPath();
         this.context.moveTo(coord[0],coord[1]);
         this.draw(coord[0],coord[1]);

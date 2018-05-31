@@ -10,8 +10,8 @@ class DrawingStraight extends PaintFunction{
         this.contextDraft.strokeStyle = document.getElementById('colorpickerstroke').value;
         this.contextReal.lineCap = "round";
         this.contextDraft.lineCap = "round";
-        this.contextReal.lineWidth = 5;
-        this.contextDraft.lineWidth = 5;
+        this.contextReal.lineWidth = document.getElementById('brushSize').value;
+        this.contextDraft.lineWidth = document.getElementById('brushSize').value;
         this.origX = coord[0];
         this.origY = coord[1]; 
         this.contextReal.beginPath();

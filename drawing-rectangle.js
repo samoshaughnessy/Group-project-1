@@ -8,7 +8,7 @@ class DrawingRectangle extends PaintFunction{
     onMouseDown(coord,event){
         this.contextReal.fillStyle = document.getElementById('colorpickerfill').value;
         this.contextReal.strokeStyle = document.getElementById('colorpickerstroke').value; 
-        this.contextReal.lineWidth = 5;
+        this.contextReal.lineWidth = document.getElementById('brushSize').value;
         this.contextReal.beginPath();
         this.origX = coord[0];
         this.origY = coord[1];
@@ -18,7 +18,7 @@ class DrawingRectangle extends PaintFunction{
     onDragging(coord,event){       
         this.contextDraft.fillStyle = document.getElementById('colorpickerfill').value;
         this.contextDraft.strokeStyle = document.getElementById('colorpickerstroke').value; 
-        this.contextDraft.lineWidth = 5;
+        this.contextDraft.lineWidth = document.getElementById('brushSize').value;
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
         this.contextDraft.beginPath();        
         this.contextDraft.fillRect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY)

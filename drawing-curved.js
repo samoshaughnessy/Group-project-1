@@ -13,8 +13,8 @@ class DrawingCurved extends PaintFunction{
         this.contextDraft.lineCap = 'round';
         this.contextReal.strokeStyle = document.getElementById('colorpickerstroke').value; 
         this.contextDraft.strokeStyle = document.getElementById('colorpickerstroke').value; 
-        this.contextReal.lineWidth = 5;
-        this.contextDraft.lineWidth = 5;
+        this.contextReal.lineWidth = document.getElementById('brushSize').value;
+        this.contextDraft.lineWidth = document.getElementById('brushSize').value;
         this.origX = coord[0];
         this.origY = coord[1];
         this.contextReal.beginPath(); 

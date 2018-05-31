@@ -10,7 +10,10 @@ class DrawingTriangle extends PaintFunction {
         if (this.actionCounter === 0) {
             this.contextReal.fillStyle = document.getElementById('colorpickerfill').value; 
             this.contextReal.strokeStyle = document.getElementById('colorpickerstroke').value; 
-            this.contextReal.lineWidth = 5;
+            this.contextReal.lineWidth = document.getElementById('brushSize').value;
+            this.contextDraft.fillStyle = document.getElementById('colorpickerfill').value; 
+            this.contextDraft.strokeStyle = document.getElementById('colorpickerstroke').value; 
+            this.contextDraft.lineWidth = document.getElementById('brushSize').value;
             this.contextReal.beginPath();
             this.origX = coord[0];
             this.origY = coord[1];

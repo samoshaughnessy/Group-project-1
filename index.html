@@ -27,8 +27,7 @@
             <span class="btn btn-primary fa fa-square" id="drawing-rectangle" title="Draw the Rectangle">Drawing Rectangle</span>
             <span class="btn btn-primary fa fa-circle" id="drawing-ellipse" title="Draw the Circle">Drawing Ellipse </span>
             <span class="btn btn-primary fa fa-font" id="text" title="Type me Harder">Type me</span>
-            <span class="btn btn-primary fa fa-angle-up" id="thick" title="I make things thicker">Thick-Line</span>
-            <span class="btn btn-primary fa fa-angle-down" id="thin" title="I make things thinner">Thin-Line</span>
+           
         </div>
         <!--old version
         <div class="color-pallette">
@@ -40,10 +39,16 @@
                 <div id="color-picker">
                   <canvas id="color-block" height="150" width="150"></canvas>
                   <canvas id="color-strip" height="150" width="30"></canvas>
-                </div>
+                </div> 
+            <span class="btn btn-primary fa fa-angle-up" id="thick" type="thickness" title="I make things thicker">Thick-Line</span>
+            <span class="btn btn-primary fa fa-angle-down" id="thick" type="thinness" title="I make things thinner">Thin-Line</span>
         </div> -->
         <div class="colorText"><h3>fill</h3><input type="color" id="colorpickerfill"></div>
         <div class="colorText"><h3>stroke</h3><input type="color" id="colorpickerstroke"></div>
+        <div id="sizeMenu">
+            <h3>Line-Width</h3>
+            <div class="sizeSlider"><input type="range" min="1" max="51" value="5" step="2" class="slider" id="brushSize"></div>
+        </div>
         
 
     </div>
@@ -114,8 +119,8 @@
             currentFunction = new Rubber(contextReal, contextDraft);
             console.log('function rubbing active');
         });
-        
     </script>
+    
 </body>
 
 </html>
