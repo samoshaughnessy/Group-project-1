@@ -83,10 +83,7 @@
     <script type='text/javascript'>   
         currentFunction = new DrawingRectangle(contextReal, contextDraft);
 
-        $('#clear-button').click(() => {
-            currentFunction = new ClearButton(contextReal, contextDraft);
-            console.log('function clear active');
-        });
+    
         $('#drawing-rectangle').click(() => {
             currentFunction = new DrawingRectangle(contextReal, contextDraft);
             console.log('function Rectangle  active');

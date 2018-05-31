@@ -1,10 +1,4 @@
-class ClearButton extends PaintFunction {
-    constructor(contextReal, contextDraft) {
-        super();
-        this.contextReal = contextReal;
-        this.contextDraft = contextDraft;
-    };
-};
+
 $('#clear-button').on("click", function () {
     contextReal.fillStyle = "white";
     contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
