@@ -32,3 +32,16 @@ var undoObject = {
   }
 }
 
+let undoButton = document.getElementById('undo');
+undoButton.addEventListener('click', function() {
+  undoObject.undoAction();
+  console.log('did I work?')
+});
+
+let redoButton = document.getElementById('redo');
+redoButton.addEventListener('click', function() {
+  undoObject.redoAction();
+  console.log('did I work yet?')
+});
+
+
