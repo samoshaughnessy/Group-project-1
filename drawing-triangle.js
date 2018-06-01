@@ -51,7 +51,7 @@ class DrawingTriangle extends PaintFunction {
     }
   }
 
-  onMouseMove() { }
+  onMouseMove() {}
   onMouseUp(coord) {
     if (this.actionCounter === 3) {
       this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);

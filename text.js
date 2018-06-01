@@ -4,12 +4,13 @@ class Text extends PaintFunction {
     this.contextReal = contextReal;
     this.contextDraft = contextDraft;
     this.fontWeight = 600;
-    this.fontSize = 20;
+    this.fontSize = 15;
     this.fontStyle = "Arial";
-    this.fillStyle = "black";
+    this.fillStyle = 'black';
     this.textX = [];
     this.textY = [];
   }
+
 
   onMouseDown(coord, event) {
     this.textX.push(coord[0]);

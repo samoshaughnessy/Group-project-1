@@ -44,7 +44,7 @@ This button allows users to draw rectangles or squares to the canvas, the first 
 
 10. Ellipse
 
-This button allows users to draw ellipses or circles, the first mouse down initiates the center of the shape, then dragging while clicking allows the users to size the shape as well as angle the shape in a desirable manner. The fill color and lohe color is changable as is the line width.
+This button allows users to draw ellipses or circles, the first mouse down initiates the center of the shape, then dragging while clicking allows the users to size the shape as well as angle the shape in a desirable manner. The fill color and line color is changable as is the line width.
 
 11. Text
 
@@ -55,10 +55,11 @@ This button allows the user to input text onto the canvas, when selected and the
 ### Bugs of all kinds
 
 1. Clear Button
-When this button was first introduced to Canvas 
+When this button was first introduced to our Canvas app it caused an unexpected issue with the free drawing, if the clear button was used, the free drawing would not show uo on context real until another function was selected and used. This was fixed as we changed the clear function to only clear canvas real.
 
 2. Dotted Line
+This button added more than one bug into the equation, at first if this was selected then all subsequent functions would have dotted line, this was an easy fix as you just needed to change the ither functiins by adding setDashLine to empty. Another bug was that the if the drawing line function was used before the dotted line function then the style of the dots would have changed as the style was overwritten with a new element. To fix this all the was needed was to set the class and it was fine.
 
-3. Context Draft
+3. Text
 
-4. Text
+Though the text function allows users to comment text to the canvas we were unable to change where the box appears as well as how the text appears.
