@@ -55,6 +55,7 @@ This button allows the user to input text onto the canvas, when selected and the
 ### Bugs of all kinds
 
 1. Clear Button
+When this button was first introduced to Canvas 
 
 2. Dotted Line
 
