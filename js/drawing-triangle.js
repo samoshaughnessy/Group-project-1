@@ -17,7 +17,6 @@ class DrawingTriangle extends PaintFunction {
       this.contextReal.beginPath();
       this.origX = coord[0];
       this.origY = coord[1];
-      console.log('you want something?');
       this.actionCounter = 1;
       // above starts the triangle, your starting coord
     }
@@ -32,7 +31,6 @@ class DrawingTriangle extends PaintFunction {
       this.contextDraft.lineTo(this.endX, this.endY);
       this.contextDraft.fill();
       this.contextDraft.stroke();
-      console.log('im a meseek look at me');
       this.actionCounter = 2;
     }
   }
@@ -46,7 +44,6 @@ class DrawingTriangle extends PaintFunction {
       this.contextDraft.fill();
       this.contextDraft.stroke();
       this.contextDraft.closePath();
-      console.log('hello general kenobi')
       this.actionCounter = 3;
     }
   }
@@ -61,7 +58,6 @@ class DrawingTriangle extends PaintFunction {
       this.contextReal.closePath();
       this.contextReal.fill();
       this.contextReal.stroke();
-      console.log('should I be here?')
       this.actionCounter = 0;
       this.onFinish();
     }

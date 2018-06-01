@@ -19,7 +19,6 @@ class DrawingDotted extends PaintFunction{
         this.contextReal.setLineDash([5,30]);
         this.contextDraft.setLineDash([5,30]);
         this.contextReal.moveTo(this.origX,this.origY);
-        console.log('does it draw dots??')
     }
     onDragging(coord,event){
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
