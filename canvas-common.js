@@ -51,4 +51,5 @@ class PaintFunction{
     onMouseUp(){}
     onMouseLeave(){}
     onMouseEnter(){}
+    onFinish(){}
 }     

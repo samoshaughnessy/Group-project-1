@@ -1,32 +1,40 @@
-class DrawingLine extends PaintFunction{
-    constructor(contextReal){
-        super();
-        this.context = contextReal;
-    }
-    
-    onMouseDown(coord,event){
-        this.context.strokeStyle = document.getElementById('colorpickerstroke').value;
-        this.context.lineJoin = "round";
-        this.context.lineWidth = document.getElementById('brushSize').value;
-        this.context.beginPath();
-        this.context.setLineDash([]);
-        this.context.moveTo(coord[0],coord[1]);
-        this.draw(coord[0],coord[1]);
-        console.log('drawing?')
-    }
-    onDragging(coord,event){
-        this.draw(coord[0],coord[1]);
-    }
+class DrawingLine extends PaintFunction {
+  constructor(contextReal) {
+    super();
+    this.context = contextReal;
+  }
 
-    onMouseMove(){}
-    onMouseUp(){}
-    onMouseLeave(){}
-    onMouseEnter(){}
+  onMouseDown(coord, event) {
+    this.context.strokeStyle = document.getElementById('colorpickerstroke').value;
+    this.context.lineJoin = "round";
+    this.context.lineWidth = document.getElementById('brushSize').value;
+    this.context.beginPath();
+    this.context.setLineDash([]);
+    this.context.moveTo(coord[0], coord[1]);
+    this.draw(coord[0], coord[1]);
+    console.log('drawing?')
+  }
+  onDragging(coord, event) {
+    this.draw(coord[0], coord[1]);
 
-    draw(x,y){
-        this.context.lineTo(x,y);
-        this.context.moveTo(x,y);
-        this.context.closePath();
-        this.context.stroke();    
-    }
+  }
+
+  onMouseMove() { }
+  onMouseUp() {
+    this.onFinish();
+  }
+  onMouseLeave() { }
+  onMouseEnter() { }
+
+  draw(x, y) {
+    this.context.lineTo(x, y);
+    this.context.moveTo(x, y);
+    this.context.closePath();
+    this.context.stroke();
+  }
+  onFinish() {
+    undoObject.states[undoObject.actionCount] = new Image();
+    undoObject.states[undoObject.actionCount].src = canvasReal.toDataURL();
+    undoObject.actionCount++;
+  }
 } 
