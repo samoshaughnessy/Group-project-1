@@ -48,6 +48,16 @@ This button allows users to draw ellipses or circles, the first mouse down initi
 
 11. Text
 
+This button allows the user to input text onto the canvas, when selected and the user clicks on the canvas a box will appear, the user then should click on the box and input the text, clicking outside of the box will commit the text to the canvas. 
+
 12. Undo / Redo 
 
 ### Bugs of all kinds
+
+1. Clear Button
+
+2. Dotted Line
+
+3. Context Draft
+
+4. Text
