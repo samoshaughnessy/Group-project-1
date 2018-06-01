@@ -25,7 +25,7 @@ class Text extends PaintFunction {
   outputText(ctx) {
     let inputText = $('#textInput').val();
     contextReal.fillText(inputText, this.textX[0], this.textY[0] + parseInt(this.fontSize));
-    $('#textInput').css({ "display": "none", "transform": "translateY(0) translateX(0)" });
+    $('#textInput').css({ "display": "none", "transform": "translateY(0) translateX(0)"});
     $('#textInput').val('');
     this.textX = [];
     this.textY = [];
