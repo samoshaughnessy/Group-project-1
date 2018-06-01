@@ -44,7 +44,7 @@ This button allows users to draw rectangles or squares to the canvas, the first 
 
 10. Ellipse
 
-This button allows users to draw ellipses or circles, the first mouse down initiates the center of the shape, then dragging while clicking allows the users to size the shape as well as angle the shape in a desirable manner. The fill color and lohe color is changable as is the line width.
+This button allows users to draw ellipses or circles, the first mouse down initiates the center of the shape, then dragging while clicking allows the users to size the shape as well as angle the shape in a desirable manner. The fill color and line color is changable as is the line width.
 
 11. Text
 
