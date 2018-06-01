@@ -1,0 +1,41 @@
+body {
+    background: url(bg2.jpg);
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.canvas {
+    border: 2px #d3d3d3 solid;
+    background-color: white;
+    position: absolute;
+}
+
+.main {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#canvas-draft {
+    background-color: transparent;
+}
+
+#brushSize{
+    width:80%;
+}
+
+h3{
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+button{
+    margin-bottom: 2px;
+}
+
+a{
+    margin-bottom: 2px;
+}

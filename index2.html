@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas app group 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style2.css" />
+</head>
+
+<body class="jumbotron">
+    <div class="row">
+        <div class="col-lg-1">
+            <section class="toolbar">
+                <a class="btn btn-success fa fa-download" id="download" download="my-file-name.png" href="#" title="I save"></a>
+                <button class="btn btn-info fa fa-paint-brush" id="drawing-line" title="Free Line drawing"></button>
+                <button class="btn btn-info fa fa-ellipsis-h" id="dotted-line" title="Draw a dotted Line"></button>
+                <button class="btn btn-info fa fa-minus" id="straight-line" title="Draw a Straight Line"></button>
+                <button class="btn btn-info fa fa-moon" id="curved-line" title="Draw a Curved Line"></button>
+                <button class="btn btn-primary fa fa-exclamation-triangle" id="triangle" title="Draw a triangle"></button>
+                <button class="btn btn-primary fa fa-square" id="drawing-rectangle" title="Draw the Rectangle"></button>
+                <button class="btn btn-primary fa fa-circle" id="drawing-ellipse" title="Draw the Circle"></button>
+                <button class="btn btn-primary fa fa-font" id="text" title="Type me Harder"></button>
+                <button class="btn btn-danger fa fa-chalkboard-teacher" id="clear-button" title="Clears Canvas"></button>
+                <button class="btn btn-danger fa fa-undo" id="undo" title="Undo your change"></button>
+                <button class="btn btn-danger fa fa-redo-alt" id="redo" title="Redo the change"></button>
+                <button class="btn btn-danger fa fa-eraser" id="rubber" title="I rub out"></button>
+                <div class="text-center"style="margin-top: 15px;">
+                    <h3>fill</h3>
+                    <input type="color" id="colorpickerfill">
+                    <h3>stroke</h3>
+                    <input type="color" id="colorpickerstroke">
+                    <h3>line width</h3>
+                    <input type="range" min="1" max="26" value="5" step="2" class="slider" id="brushSize">
+                </div>
+            </section>
+        </div>
+
+        <div class="main -lg-11">
+            <canvas id="canvas-real" class="canvas" width='1150px' height='700px'></canvas>
+            <canvas id="canvas-draft" class="canvas" width='1150px' height='700px'></canvas>
+            <input id="textInput" name="inputField" value=""></input>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <script type='text/javascript' src="canvas-common.js"></script>
+        <script type='text/javascript' src="drawing-save.js"></script>
+        <script type='text/javascript' src="clear.js"></script>
+        <script type='text/javascript' src="drawing-line.js"></script>
+        <script type='text/javascript' src="drawing-rectangle.js"></script>
+        <script type='text/javascript' src="drawing-dotted.js"></script>
+        <script type='text/javascript' src="drawing-curved.js"></script>
+        <script type='text/javascript' src="drawing-ellipse.js"></script>
+        <script type='text/javascript' src="drawing-triangle.js"></script>
+        <script type='text/javascript' src="drawing-straight.js"></script>
+        <script type='text/javascript' src="text.js"></script>
+        <script type='text/javascript' src="rubber.js"></script>
+        <script type='text/javascript' src="undo.js"></script>
+        <script type='text/javascript'>
+            currentFunction = new DrawingRectangle(contextReal, contextDraft);
+
+            $('#clear-button').click(() => {
+                // currentFunction = new ClearButton(contextReal, contextDraft);
+                console.log('function clear active');
+            });
+            $('#drawing-rectangle').click(() => {
+                currentFunction = new DrawingRectangle(contextReal, contextDraft);
+                console.log('function Rectangle active');
+
+            });
+            $('#dotted-line').click(() => {
+                currentFunction = new DrawingDotted(contextReal, contextDraft);
+                console.log('function dotted  active');
+
+            });
+            $('#drawing-line').click(() => {
+                currentFunction = new DrawingLine(contextReal);
+                console.log('function line active');
+
+            });
+            $('#drawing-ellipse').click(() => {
+                currentFunction = new DrawingEllipse(contextReal, contextDraft);
+                console.log('function ellipse active');
+            });
+            $('#straight-line').click(() => {
+                currentFunction = new DrawingStraight(contextReal, contextDraft);
+                console.log('function straight active');
+            });
+            $('#curved-line').click(() => {
+                currentFunction = new DrawingCurved(contextReal, contextDraft);
+                console.log('function Curved active');
+            });
+            $('#text').click(() => {
+                currentFunction = new Text(contextReal);
+                console.log('function text active');
+            });
+            $('#triangle').click(() => {
+                currentFunction = new DrawingTriangle(contextReal, contextDraft);
+                console.log('function triangle active');
+            });
+            $('#rubber').click(() => {
+                currentFunction = new Rubber(contextReal, contextDraft);
+                console.log('function rubbing active');
+            });
+        </script>
+</body>
+
+</html>
