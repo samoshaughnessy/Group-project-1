@@ -1,0 +1,59 @@
+body ,main{
+    background: url(../images/bg-3.jpg) no-repeat;
+}
+
+i{
+    font-size: 40px;
+    color: red;
+    padding-left: 20px;
+}
+
+h1{
+    font-size: 40px;
+    color:#fff;
+    padding-left: 400px;
+    background: rgba(0,0,0,0.3);
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.colorpicker{
+    background: rgba(0,0,0,0.3);
+    padding: 10px 0 10px 0;
+    border-radius: 20px;
+}
+
+.canvas {
+    border: 4px #8B5F47 solid;
+    background-color: #06604b;
+    position: absolute;
+}
+
+#canvas-draft {
+    background-color: transparent;
+}
+
+#brushSize{
+    width:80%;
+}
+
+h3{
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+button{
+    margin-bottom: 2px;
+}
+
+a{
+    margin-bottom: 2px;
+}
+
+.jumbotron{
+    padding: 30px 0 0 30px;;
+}

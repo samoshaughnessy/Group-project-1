@@ -5,14 +5,13 @@ class Rubber extends PaintFunction{
     }
     
     onMouseDown(coord,event){
-        this.context.strokeStyle = "white";
+        this.context.strokeStyle = "#06604b";
         this.context.lineJoin = "round";
         this.context.lineWidth = document.getElementById('brushSize').value;
         this.context.beginPath();
         this.context.setLineDash([]);
         this.context.moveTo(coord[0],coord[1]);
         this.draw(coord[0],coord[1]);
-        console.log('rubbing??')
     }
     onDragging(coord,event){
         this.draw(coord[0],coord[1]);

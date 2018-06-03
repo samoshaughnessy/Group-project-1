@@ -14,7 +14,6 @@ class DrawingRectangle extends PaintFunction {
     this.contextDraft.setLineDash([]);
     this.origX = coord[0];
     this.origY = coord[1];
-    console.log('you clicked?');
   }
 
   onDragging(coord, event) {

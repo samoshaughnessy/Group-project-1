@@ -7,7 +7,7 @@ var undoObject = {
       undoObject.actionCount--;
       undoObject.savePoint = undoObject.actionCount;
 
-      contextReal.fillStyle = "white";
+      contextReal.fillStyle = "#06604b";
       contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
 
       contextReal.drawImage(undoObject.states[undoObject.actionCount - 1], 0, 0);
@@ -19,7 +19,7 @@ var undoObject = {
       undoObject.actionCount++;
       undoObject.savePoint++;
 
-      contextReal.fillStyle = "white";
+      contextReal.fillStyle = "#06604b";
       contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
 
       contextReal.drawImage(undoObject.states[undoObject.actionCount - 1], 0, 0);
