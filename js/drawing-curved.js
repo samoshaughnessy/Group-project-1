@@ -52,7 +52,6 @@ class DrawingCurved extends PaintFunction {
       this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
       this.contextReal.quadraticCurveTo(coord[0], coord[1], this.endX, this.endY);
       this.contextReal.stroke();
-      this.onFinish();
       this.actionCounter = 0;
       this.onFinish();
     }
