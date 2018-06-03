@@ -21,7 +21,7 @@ class DrawingCurved extends PaintFunction {
       this.contextReal.setLineDash([]);
       this.contextDraft.setLineDash([]);
       this.contextReal.moveTo(this.origX, this.origY);
-      
+
     }
     else if (this.actionCounter === 1) {
     }
@@ -53,8 +53,8 @@ class DrawingCurved extends PaintFunction {
       this.contextReal.quadraticCurveTo(coord[0], coord[1], this.endX, this.endY);
       this.contextReal.stroke();
       console.log('yummy');
-      this.onFinish();
       this.actionCounter = 0;
+      this.onFinish();
     }
   }
 
