@@ -12,4 +12,8 @@ $('#clear-button').on("click", function () {
     // contextDraft.fillStyle = "white";
     // contextDraft.fillRect(0, 0, canvasReal.width, canvasReal.height); 
 
+    // increment undo action count
+    undoObject.states[undoObject.actionCount] = new Image();
+    undoObject.states[undoObject.actionCount].src = canvasReal.toDataURL();
+    undoObject.actionCount++;
 })
